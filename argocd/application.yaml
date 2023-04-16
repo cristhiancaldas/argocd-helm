@@ -13,7 +13,7 @@ spec:
       valueFiles:
         - values.yaml
     path: helm
-    repoURL: 'https://github.com/cristhiancaldas/appHelm.git'
+    repoURL: 'https://github.com/cristhiancaldas/argocd-helm.git'
     targetRevision: HEAD
   syncPolicy:
     retry:

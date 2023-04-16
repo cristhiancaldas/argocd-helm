@@ -16,5 +16,5 @@ spec:
     - group: '*'
       kind: '*'
   sourceRepos:
-    - 'https://github.com/cristhiancaldas/appHelm.git'
+    - 'https://github.com/cristhiancaldas/argocd-helm.git'
 status: {}
