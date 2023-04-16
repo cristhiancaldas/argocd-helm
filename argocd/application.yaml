@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: vend-helm
+  namespace: argocd
+spec:
+  destination:
+    name: in-cluster
+    namespace: vend
+  project: vend-helm
+  source:
+    helm:
+      valueFiles:
+        - values.yaml
+    path: helm
+    repoURL: 'https://github.com/cristhiancaldas/appHelm.git'
+    targetRevision: HEAD
+  syncPolicy:
+    retry:
+      backoff:
+        duration: 5s
+        factor: 2
+        maxDuration: 3m0s
+      limit: 2
