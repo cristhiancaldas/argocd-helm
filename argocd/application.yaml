@@ -1,13 +1,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: appbackend-helm
+  name: app-backend
   namespace: argocd
 spec:
   destination:
     name: in-cluster
     namespace: app-backend
-  project: appbackend-helm
+  project: app-backend
   source:
     helm:
       valueFiles:
