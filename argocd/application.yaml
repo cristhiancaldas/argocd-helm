@@ -6,7 +6,7 @@ metadata:
 spec:
   destination:
     name: in-cluster
-    namespace: vend
+    namespace: app-backend
   project: vend-helm
   source:
     helm:
